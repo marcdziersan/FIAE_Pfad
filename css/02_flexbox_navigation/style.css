@@ -1,0 +1,1 @@
+body{font-family:system-ui;margin:0}.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem;background:#111827;color:white}.nav nav{display:flex;gap:.75rem;flex-wrap:wrap}.nav a{color:white}.cards{display:flex;gap:1rem;flex-wrap:wrap;padding:1rem}.cards article{flex:1 1 220px;border:1px solid #ddd;border-radius:16px;padding:1rem}

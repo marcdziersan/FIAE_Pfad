@@ -1,0 +1,1 @@
+body{font-family:system-ui;background:#f8fafc;color:#111827}main{max-width:760px;margin:2rem auto;background:white;padding:2rem;border-radius:18px}button{padding:.75rem 1rem}@media print{body{background:white;color:black}main{margin:0;padding:0;border-radius:0}.screen-note,button{display:none}a::after{content:" (" attr(href) ")"}}

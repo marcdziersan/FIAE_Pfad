@@ -1,0 +1,1 @@
+body{font-family:system-ui;background:#f8fafc;margin:0}main{width:min(100% - 2rem,1000px);margin:2rem auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}.grid article{min-height:120px;display:grid;place-items:center;background:white;border:1px solid #e2e8f0;border-radius:18px;font-weight:800}

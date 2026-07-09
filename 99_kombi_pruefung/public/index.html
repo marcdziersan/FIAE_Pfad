@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kombi-Prüfung · FIAE Grundlagen</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">Zum Inhalt springen</a>
+  <header class="hero">
+    <div>
+      <p class="kicker">HTML · CSS · JavaScript · PHP · Python</p>
+      <h1>Kombinierter Prüfpfad</h1>
+      <p>Mini-Business-Board mit Kontakten, Notizen und Aufträgen. Alle Kernbausteine sind einzeln nachvollziehbar und gemeinsam prüfbar.</p>
+    </div>
+  </header>
+
+  <main id="content" class="layout">
+    <section class="panel" aria-labelledby="contact-title">
+      <h2 id="contact-title">Kontakt anlegen</h2>
+      <form id="contactForm">
+        <label>Name <input name="name" required></label>
+        <label>E-Mail <input name="email" type="email" required></label>
+        <label>Telefon <input name="phone" required></label>
+        <button>Kontakt speichern</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="note-title">
+      <h2 id="note-title">Notiz anlegen</h2>
+      <form id="noteForm">
+        <label>Titel <input name="title" required></label>
+        <label>Text <textarea name="text" required minlength="5"></textarea></label>
+        <button>Notiz speichern</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="order-title">
+      <h2 id="order-title">Auftrag anlegen</h2>
+      <form id="orderForm">
+        <label>Kunde <input name="customer" required></label>
+        <label>Leistung <input name="title" required></label>
+        <label>Netto <input name="net" type="number" min="0" step="0.01" required></label>
+        <button>Auftrag speichern</button>
+      </form>
+    </section>
+
+    <section class="panel wide" aria-labelledby="output-title">
+      <div class="section-head">
+        <h2 id="output-title">Datenübersicht</h2>
+        <button id="refresh" type="button">Aktualisieren</button>
+      </div>
+      <div id="message" role="status"></div>
+      <div class="data-grid">
+        <article><h3>Kontakte</h3><ul id="contacts"></ul></article>
+        <article><h3>Notizen</h3><ul id="notes"></ul></article>
+        <article><h3>Aufträge</h3><div class="table-wrap"><table><thead><tr><th>Kunde</th><th>Leistung</th><th>Brutto</th><th>Status</th></tr></thead><tbody id="orders"></tbody></table></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>FIAE-Grundlagenpfad · prüfbare Kombination aus Frontend, Backend und Skript-Auswertung.</p>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+CREATE SEQUENCE seq_kunden_id;
+CREATE SEQUENCE seq_auftraege_id;
+
+SET TERM !! ;
+
+CREATE TRIGGER bi_kunden FOR kunden
+ACTIVE BEFORE INSERT POSITION 0
+AS
+BEGIN
+  IF (NEW.id IS NULL) THEN
+    NEW.id = NEXT VALUE FOR seq_kunden_id;
+END!!
+
+CREATE TRIGGER bi_auftraege FOR auftraege
+ACTIVE BEFORE INSERT POSITION 0
+AS
+BEGIN
+  IF (NEW.id IS NULL) THEN
+    NEW.id = NEXT VALUE FOR seq_auftraege_id;
+END!!
+
+SET TERM ; !!
