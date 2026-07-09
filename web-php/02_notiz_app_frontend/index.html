@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 Notiz-App Frontend</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="kicker">FIAE Grundlagen · DOM Events localStorage</p>
+      <h1>Notiz-App im Browser</h1>
+      <p>CRUD ohne Backend: Notizen werden lokal im Browser gespeichert.</p>
+    </header>
+
+    <form id="noteForm" class="note-form">
+      <label for="title">Titel</label>
+      <input id="title" name="title" maxlength="80" required placeholder="z. B. CSS wiederholen">
+
+      <label for="content">Inhalt</label>
+      <textarea id="content" name="content" rows="4" maxlength="400" required placeholder="Kurze Beschreibung"></textarea>
+
+      <button type="submit">Notiz speichern</button>
+      <p id="formMessage" class="message" role="status"></p>
+    </form>
+
+    <section aria-labelledby="notesTitle">
+      <h2 id="notesTitle">Gespeicherte Notizen</h2>
+      <div id="notesList" class="notes-list"></div>
+    </section>
+  </main>
+
+  <template id="noteTemplate">
+    <article class="note-card">
+      <div>
+        <h3></h3>
+        <p></p>
+        <small></small>
+      </div>
+      <button class="delete-button" type="button">Löschen</button>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
